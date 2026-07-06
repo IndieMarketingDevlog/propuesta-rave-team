@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>propuesta · space diva — indie marketing devlog</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- PASSWORD GATE: blocks everything below until unlocked -->
+<div class="gate-overlay" id="gateOverlay">
+  <form class="gate-card" id="gateForm">
+    <span class="gate-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10.5" width="14" height="10" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="15" r="1.4" fill="currentColor"/></svg>
+    </span>
+    <h1>Propuesta privada</h1>
+    <p class="gate-text">Este documento es solo para Rave Team. Introduce la contraseña que te he compartido para entrar.</p>
+    <input class="gate-input" id="gateInput" type="password" placeholder="Contraseña" autocomplete="off" autofocus>
+    <button class="gate-submit" type="submit">Entrar</button>
+    <p class="gate-error" id="gateError" hidden>Contraseña incorrecta, inténtalo de nuevo.</p>
+  </form>
+</div>
+
+<div class="page" id="pageRoot" hidden>
+
+  <!-- MAC SCREEN -->
+  <div class="mac-screen">
+
+    <!-- MENU BAR -->
+    <div class="menubar">
+      <div class="menubar-left">
+        <div class="menubar-id">
+          <img class="menubar-star" src="assets/images/estrella.png" alt="estrella indie marketing devlog">
+          <span class="menubar-brand">indie marketing devlog</span>
+        </div>
+        <span class="menu-extra">archivo</span>
+        <span class="menu-extra">edición</span>
+        <button class="menu-extra btn-resumen" id="openSummaryBtn" type="button">ver resumen</button>
+      </div>
+      <div class="menubar-right">
+        <span class="menubar-tag">propuesta ✦ space diva</span>
+        <span class="menubar-date">jul 2026</span>
+      </div>
+    </div>
+
+    <!-- DESKTOP -->
+    <div class="desktop" id="desktop">
+
+      <!-- CENTER HERO -->
+      <div class="center-hero">
+        <div class="logos">
+          <img class="logo-rave" src="assets/images/raveteam.png" alt="Rave Team">
+          <img class="logo-diva" src="assets/images/spacediva.png" alt="Space Diva">
+        </div>
+        <span class="client-tag">propuesta para → Rave Team</span>
+        <h1>Muchos juegos indie<br>mueren<br>antes de ser descubiertos.</h1>
+        <p class="hook"><span>Yo no dejo que eso pase.</span></p>
+        <img class="hero-logo" src="assets/images/Logo_fondo_claro.png" alt="indie marketing devlog">
+      </div>
+
+      <!-- FOLDER 1: sobre indie marketing devlog -->
+      <div class="folder f0">
+        <div class="folder-icon">
+          <div class="icon-back"><div class="tab"></div></div>
+          <div class="folder-preview">
+            <div class="folder-preview-card">
+              <span class="folder-preview-eyebrow">Contexto</span>
+              <p class="folder-preview-title">sobre mí</p>
+              <p class="folder-preview-desc">Qué me diferencia y por qué trabajar conmigo.</p>
+            </div>
+          </div>
+          <div class="icon-front"></div>
+        </div>
+        <span class="folder-label">sobre mi</span>
+        <button class="folder-btn" type="button" data-open="about" aria-label="Sobre mí"></button>
+      </div>
+
+      <!-- FOLDER 2: steam page -->
+      <div class="folder f1">
+        <div class="folder-icon">
+          <div class="icon-back"><div class="tab"></div></div>
+          <div class="folder-preview">
+            <div class="folder-preview-card">
+              <span class="folder-preview-eyebrow">servicio 01</span>
+              <p class="folder-preview-title">steam page</p>
+              <p class="folder-preview-desc">Auditoría, copy y dirección visual de la cápsula.</p>
+            </div>
+          </div>
+          <div class="icon-front"></div>
+        </div>
+        <span class="folder-label">steam page</span>
+        <button class="folder-btn" type="button" data-open="steam" aria-label="Steam page"></button>
+      </div>
+
+      <!-- FOLDER 3: campaña mobile -->
+      <div class="folder f2">
+        <div class="folder-icon">
+          <div class="icon-back"><div class="tab"></div></div>
+          <div class="folder-preview">
+            <div class="folder-preview-card">
+              <span class="folder-preview-eyebrow">servicio 02</span>
+              <p class="folder-preview-title">campaña mobile</p>
+              <p class="folder-preview-desc">Research, estrategia y outreach para el lanzamiento.</p>
+            </div>
+          </div>
+          <div class="icon-front"></div>
+        </div>
+        <span class="folder-label">campaña mobile</span>
+        <button class="folder-btn" type="button" data-open="campaign" aria-label="Campaña mobile"></button>
+      </div>
+
+      <!-- FOLDER 4: estrategia redes -->
+      <div class="folder f3">
+        <div class="folder-icon">
+          <div class="icon-back"><div class="tab"></div></div>
+          <div class="folder-preview">
+            <div class="folder-preview-card">
+              <span class="folder-preview-eyebrow">servicio 03</span>
+              <p class="folder-preview-title">estrategia redes</p>
+              <p class="folder-preview-desc">Pilares de contenido y calendario mensual.</p>
+            </div>
+          </div>
+          <div class="icon-front"></div>
+        </div>
+        <span class="folder-label">estrategia redes</span>
+        <button class="folder-btn" type="button" data-open="social" aria-label="Estrategia redes"></button>
+      </div>
+
+    </div><!-- /DESKTOP -->
+  </div><!-- /screen -->
+
+  <!-- MODAL: sheet pulled from folder -->
+  <div class="overlay" id="sheetOverlay">
+    <div class="sheet-wrap">
+
+      <div class="sheet" id="sheetContent">
+        <button class="sheet-close" id="sheetCloseBtn" aria-label="cerrar" type="button">✕</button>
+
+        <div class="sheet-scroll" id="sheetScroll">
+
+        <!-- ===== STEAM PAGE ===== -->
+        <div data-panel="steam" hidden>
+          <div class="sheet-head">
+            <span class="sheet-eyebrow">Servicio 01</span>
+            <h2>Steam page</h2>
+            <div class="sheet-price">
+              <span class="old">438&nbsp;€</span>
+              <span class="new">−15% → 372,30&nbsp;€</span>
+            </div>
+          </div>
+          <div class="sheet-body">
+            <div class="sheet-step">
+              <span class="sheet-step-num">01</span>
+              <div><p class="sheet-step-title">Auditoría inicial</p><p class="sheet-step-desc">Revisión de cápsula, trailer, descripción, tags y screenshots frente a patrones medibles de conversión (algoritmo de Steam).</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">02</span>
+              <div><p class="sheet-step-title">Redacción y carga de copy en Steamworks</p><p class="sheet-step-desc">Descripción corta/larga, tags y orden de screenshots.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">03</span>
+              <div><p class="sheet-step-title">Sesión de dirección visual con Ninfa</p><p class="sheet-step-desc">Revisar qué cambiar en cápsula/capturas y por qué; Ninfa ejecuta.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">04</span>
+              <div><p class="sheet-step-title">Cross-promoción</p><p class="sheet-step-desc">Actualizar Steam page y landing mencionando disponibilidad en mobile.</p></div>
+            </div>
+            <div class="sheet-note">
+              <span class="sheet-note-label">no incluye</span>
+              <p>Diseño ni producción de piezas gráficas nuevas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CAMPAÑA MOBILE ===== -->
+        <div data-panel="campaign" hidden>
+          <div class="sheet-head">
+            <span class="sheet-eyebrow">Servicio 02</span>
+            <h2>Campaña lanzamiento mobile</h2>
+            <div class="sheet-price">
+              <span class="old">821&nbsp;€</span>
+              <span class="new">−15% → 697,85&nbsp;€</span>
+            </div>
+          </div>
+          <div class="sheet-body">
+            <div class="sheet-step">
+              <span class="sheet-step-num">01</span>
+              <div><p class="sheet-step-title">Research de mercado</p><p class="sheet-step-desc">Competencia mobile y contexto del lanzamiento (Ludonarracon, 8–12 oct).</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">02</span>
+              <div><p class="sheet-step-title">Documento de estrategia</p><p class="sheet-step-desc">Cronograma, mensajes Steam vs. mobile y datos reales de wishlists (Steamworks).</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">03</span>
+              <div><p class="sheet-step-title">Calendario de campaña</p><p class="sheet-step-desc">Qué comunicar y cuándo en el pre-lanzamiento.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">04</span>
+              <div><p class="sheet-step-title">Outreach prensa/influencers</p><p class="sheet-step-desc">Identificación, envío y seguimiento; verificando antes que el press kit esté actualizado.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">05</span>
+              <div><p class="sheet-step-title">Cierre de campaña</p><p class="sheet-step-desc">Resumen de resultados vs. objetivo al finalizar.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num free">06</span>
+              <div><p class="sheet-step-title">ASO básico <span class="badge-free">Gratis · marco de prueba</span></p><p class="sheet-step-desc">Sin coste, como validación de un futuro servicio: keywords para título/subtítulo, copy del campo de keywords y descripción corta, y revisión del orden de capturas. Sin garantía de resultado ni compromiso de continuidad.</p></div>
+            </div>
+            <div class="sheet-note">
+              <span class="sheet-note-label">no incluye</span>
+              <p>Envío técnico a tiendas, privacidad y clasificación por edad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ESTRATEGIA REDES ===== -->
+        <div data-panel="social" hidden>
+          <div class="sheet-head">
+            <span class="sheet-eyebrow">Servicio 03</span>
+            <h2>Estrategia de redes y calendario</h2>
+            <div class="sheet-price">
+              <span class="old">850&nbsp;€</span>
+              <span class="new">−15% → 722,50&nbsp;€</span>
+            </div>
+          </div>
+          <div class="sheet-body">
+            <div class="sheet-step">
+              <span class="sheet-step-num">01</span>
+              <div><p class="sheet-step-title">Pilares de contenido</p><p class="sheet-step-desc">Mensajes clave del estudio + Space Diva mobile.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">02</span>
+              <div><p class="sheet-step-title">Calendario mensual</p><p class="sheet-step-desc">Instagram, TikTok, YouTube, Bluesky/X — orgánico, sin ads. ~4 meses.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">03</span>
+              <div><p class="sheet-step-title">Calendario de campaña de octubre</p><p class="sheet-step-desc">Bloque específico dentro del calendario general.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">04</span>
+              <div><p class="sheet-step-title">Sesiones de traspaso</p><p class="sheet-step-desc">Revisión mensual con quien ejecute.</p></div>
+            </div>
+            <div class="sheet-note">
+              <span class="sheet-note-label">no incluye</span>
+              <p>Producción de contenido ni gestión de comunidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SOBRE INDIE MARKETING DEVLOG ===== -->
+        <div data-panel="about" hidden>
+          <div class="sheet-head">
+            <span class="sheet-eyebrow">Contexto</span>
+            <h2>Qué me diferencia</h2>
+          </div>
+          <div class="sheet-body">
+            <div class="sheet-step">
+              <span class="sheet-step-num">01</span>
+              <div><p class="sheet-step-title">Por qué hago esto</p><p class="sheet-step-desc">Empecé haciendo marketing de videojuegos porque unía dos cosas que me apasionan: el marketing y ser jugadora. Miro cada propuesta desde la mirada de quien también consume juegos, no solo desde la teoría de agencia.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">02</span>
+              <div><p class="sheet-step-title">Lo que cambia al trabajar conmigo</p><p class="sheet-step-desc">Pasas de la incertidumbre de no saber por dónde empezar a tener claro quién es tu público, un mensaje que representa de verdad tu juego y una estrategia concreta — con alguien que entiende el juego tanto como tú.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">03</span>
+              <div><p class="sheet-step-title">En qué creo</p><p class="sheet-step-desc">Autenticidad, transparencia en precios y entregables, comunidad antes que ads agresivos, y especialización en Steam/PC y el ecosistema indie español y europeo.</p></div>
+            </div>
+            <div class="sheet-step">
+              <span class="sheet-step-num">04</span>
+              <div><p class="sheet-step-title">Compromiso mutuo, no genérico</p><p class="sheet-step-desc">El revenue share es mi modalidad principal, y ajusto el cobro con flexibilidad según cada proyecto — a cambio, solo trabajo con equipos comprometidos al 100%. La selección es parte de la propuesta de valor.</p></div>
+            </div>
+            <div class="sheet-note">
+              <span class="sheet-note-label">mensaje esencial</span>
+              <p>Marketing indie que entiende el juego, no solo el algoritmo.</p>
+            </div>
+          </div>
+        </div>
+
+        </div><!-- /sheet-scroll -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUMMARY: ver resumen (estilo resumen de partida) -->
+  <div class="summary-overlay" id="summaryOverlay">
+    <div class="summary-card" id="summaryContent">
+      <button class="summary-close" id="summaryCloseBtn" aria-label="cerrar" type="button">✕</button>
+
+      <div class="summary-banner">
+        <span class="summary-banner-label">✦ Run completa</span>
+        <h2>Resumen de la propuesta</h2>
+        <p class="summary-banner-sub">Space Diva × Rave Team</p>
+      </div>
+
+      <div class="summary-achievements">
+        <div class="achievement">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+          </span>
+          <div class="achievement-body">
+            <span class="achievement-tag">Logro desbloqueado</span>
+            <p class="achievement-title">Steam page</p>
+          </div>
+          <div class="achievement-reward">
+            <span class="old">438,00&nbsp;€</span>
+            <span class="new">372,30&nbsp;€</span>
+          </div>
+        </div>
+        <div class="achievement">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5c2.5 1.7 4.2 4.9 4.2 8.7 0 2-.5 3.9-1.3 5.4l-2.9 3.9-2.9-3.9C8.3 15.1 7.8 13.2 7.8 11.2c0-3.8 1.7-7 4.2-8.7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10.5" r="1.8" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 16.5l-2 3.8M15.5 16.5l2 3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <div class="achievement-body">
+            <span class="achievement-tag">Logro desbloqueado</span>
+            <p class="achievement-title">Campaña mobile</p>
+          </div>
+          <div class="achievement-reward">
+            <span class="old">821,00&nbsp;€</span>
+            <span class="new">697,85&nbsp;€</span>
+          </div>
+        </div>
+        <div class="achievement">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5v3a1 1 0 0 0 1 1h1.8l4.4 3.3c.6.5 1.5.1 1.5-.7V6.9c0-.8-.9-1.2-1.5-.7L5.8 9.5H4a1 1 0 0 0-1 1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M15.5 9c.9.8 1.4 1.8 1.4 3s-.5 2.2-1.4 3M18 6.5c1.7 1.4 2.7 3.3 2.7 5.5s-1 4.1-2.7 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <div class="achievement-body">
+            <span class="achievement-tag">Logro desbloqueado</span>
+            <p class="achievement-title">Estrategia redes</p>
+          </div>
+          <div class="achievement-reward">
+            <span class="old">850,00&nbsp;€</span>
+            <span class="new">722,50&nbsp;€</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-score">
+        <div class="summary-score-row"><span>Subtotal</span><span>2.109,00&nbsp;€</span></div>
+        <div class="summary-score-row discount"><span>Descuento (−15%)</span><span>−316,35&nbsp;€</span></div>
+        <div class="summary-score-total"><span>Total</span><span>1.792,65&nbsp;€</span></div>
+      </div>
+
+      <div class="summary-cta">
+        <p>¿Te convence? Escríbeme y lo ponemos en marcha<br>esta misma semana →</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WELCOME: shown once on load -->
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-card" id="welcomeContent">
+      <button class="welcome-close" id="welcomeCloseBtn" aria-label="cerrar" type="button">✕</button>
+      <p class="welcome-text">Explora las carpetas para ver cada servicio en detalle. Cuando quieras ver el total de todo, pulsa <strong>«ver resumen»</strong>, en la barra superior.</p>
+      <button class="welcome-ok" id="welcomeOkBtn" type="button">Entendido</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="gate.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
